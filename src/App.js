@@ -17,7 +17,13 @@ const PostGenerator = () => {
     setError(""); // Clear the error if valid
     return true;
   };
-
+  const handleCopyToClipboard = () => {
+    if (generatedPost) {
+      navigator.clipboard.writeText(generatedPost);
+      alert("Post copied to clipboard!");
+    }
+  };
+  
   const handleGeneratePost = () => {
     if (!validateDay(day)) {
       return;
@@ -107,11 +113,20 @@ Proud to share my progress as I take on the #DrGViswanathan Challenge! 🎯
           Generate Post
         </button>
         {generatedPost && (
-          <div className="mt-4 bg-gray-50 p-4 rounded border">
-            <h2 className="font-bold">Generated Post:</h2>
-            <pre className="text-sm whitespace-pre-wrap">{generatedPost}</pre>
-          </div>
-        )}
+  <>
+    <div className="mt-4 bg-gray-50 p-4 rounded border">
+      <h2 className="font-bold">Generated Post:</h2>
+      <pre className="text-sm whitespace-pre-wrap">{generatedPost}</pre>
+    </div>
+    <button
+      onClick={handleCopyToClipboard}
+      className="mt-2 p-2 bg-green-500 hover:bg-green-600 text-white rounded w-full"
+    >
+      Copy to Clipboard
+    </button>
+  </>
+)}
+
       </div>
     </div>
   );
