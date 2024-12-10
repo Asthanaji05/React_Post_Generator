@@ -50,7 +50,7 @@ Proud to share my progress as I take on the #DrGViswanathan Challenge! 🎯
  
  #DrGViswanathanChallenge 
  #VIT #VITBhopal #VITBhopalLions #DSA #OpenLearning #CodingJourney  #TechCommunity #ProblemSolvingJourney #LearningEveryDay
-🧩  Tip: If you are participating in this Challange , you can use : https://react-post-generator.vercel.app/
+🧩  Tip: If you are participating in this Challenge , you can use : https://react-post-generator.vercel.app/
     `;
     setGeneratedPost(template);
   };
